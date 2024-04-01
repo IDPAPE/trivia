@@ -23,19 +23,6 @@ export class QuestionsController {
         setHTML('trivia-body', currentQuestion)
     }
 
-    //randomly picks a question from the list and returns
-    randomQuestion() {
-        let currentQuestion = ''
-        let randomizedQuestion = Math.floor(Math.random() * 9)
-        console.log(randomizedQuestion)
-        for (let i = 0; i < AppState.questions.length; i++) {
-            if (i == randomizedQuestion) {
-                currentQuestion = AppState.questions[i].GetQuestionInfo
-            }
-        }
-        console.log(currentQuestion)
-        return currentQuestion
-    }
     newQuestion() {
         console.log('getting new question')
         questionsService.newQuestion()

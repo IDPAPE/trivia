@@ -24,8 +24,8 @@ export class Question {
             }
             else {
                 allQuestions.push(this.incorrectAnswers[randomizer])
+                randomizer++
             }
-            randomizer++
         }
 
         return `

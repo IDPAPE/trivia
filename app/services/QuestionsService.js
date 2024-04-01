@@ -5,15 +5,13 @@ import { Question } from "../models/Question.js"
 class QuestionsService {
 
     async fetchTriviaQuestions() {
-        const response = await fetch('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple')
+        const response = await fetch('https://opentdb.com/api.php?amount=20&type=multiple')
         console.log('fetched', response)
         const questionsPojo = await response.json()
         console.log('json converted', questionsPojo)
         const questions = questionsPojo.results.map(question => new Question(question))
         console.log(questions)
         AppState.questions = questions
-        // let importedQuestions = AppState.questions
-        // for(let i = 0; i < importedQuestions.length; i ++){
     }
 
     newQuestion() {
