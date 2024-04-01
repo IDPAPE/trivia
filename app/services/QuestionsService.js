@@ -12,8 +12,16 @@ class QuestionsService {
         const questions = questionsPojo.results.map(question => new Question(question))
         console.log(questions)
         AppState.questions = questions
-
+        // let importedQuestions = AppState.questions
+        // for(let i = 0; i < importedQuestions.length; i ++){
     }
+
+    newQuestion() {
+        AppState.questions = AppState.questions
+    }
+
+
 }
+
 
 export const questionsService = new QuestionsService()
