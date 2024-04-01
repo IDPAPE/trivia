@@ -29,6 +29,11 @@ export class Question {
         }
 
         return `
+        <div class="row text-center">
+        <h1>${this.category}
+            <hr />
+        </h1>
+    </div>
         <div class="row border border-dark rounded text-center shadow m-3 p-3">
             <h1>${this.question}</h1>
         </div>

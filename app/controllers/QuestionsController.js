@@ -28,8 +28,8 @@ export class QuestionsController {
         questionsService.newQuestion()
     }
 
-    fetchTriviaQuestions() {
-        questionsService.fetchTriviaQuestions()
+    fetchTriviaQuestions(url) {
+        questionsService.fetchTriviaQuestions(url)
     }
 
 }

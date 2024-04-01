@@ -4,8 +4,9 @@ import { Question } from "../models/Question.js"
 
 class QuestionsService {
 
-    async fetchTriviaQuestions() {
-        const response = await fetch('https://opentdb.com/api.php?amount=20&type=multiple')
+    async fetchTriviaQuestions(url) {
+        if (url == undefined) url = 'https://opentdb.com/api.php?amount=30&type=multiple'
+        const response = await fetch(url)
         console.log('fetched', response)
         const questionsPojo = await response.json()
         console.log('json converted', questionsPojo)
